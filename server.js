@@ -157,7 +157,12 @@ server.get('/home', function(req, res) {
   if (!userSession.user) {
     res.redirect('/login');
   } else {
-      res.send(userSession.firstname+" "+userSession.lastname )
+      res.render('feed',{
+          fname: userSession.firstname,
+          lname: userSession.lastname,
+          uname: userSession.user,
+          allposts: []
+      })
   }
 })
 

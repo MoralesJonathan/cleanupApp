@@ -1,0 +1,70 @@
+extend ../pug/boilerplate.pug
+
+block prepend stylesheets
+    link(rel="stylesheet" href="/css/feed.css")
+    
+block content
+    nav
+        .nav-wrapper
+            a(href="#" class="brand-logo center") Feed
+            a(href="#" data-target="mobile-demo").sidenav-trigger
+                i.material-icons menu
+            ul#nav-mobile.left.hide-on-med-and-down
+              li
+                a(href="#!") Menu
+            ul.sidenav#mobile-demo
+                li#userArea.center
+                    i#backArrow.material-icons arrow_back
+                    img.circle(src="resources/userPictures/Jonathan-Morales-124230497.jpg")
+                    span= fname +" "+ lname
+                    span= uname
+                li.active
+                    a(href="#!") Feed
+                li
+                    a(href="#!") Settings
+                li
+                    a(href="#!") Notifications
+                li
+                    a(href="#!") Messages
+                li
+                    a(href="#!") Likes
+                li
+                    a(href="#!") Logout
+                    
+    .container.center#mainContent
+        - var posts= allposts
+        if(!posts || posts.length<1)
+            h6 No posts to show.
+        else
+            each post in posts
+                .row.noMarginBottom
+                    .col.s12.noPadding
+                        .card
+                            .row.noMarginBottom.valign-wrapper.cardTitle
+                                .col.s2
+                                    img.circle.responsive-img.profilePic(src= post.avatar)
+                                .col.s4(style="text-align:left; padding-left: 0px;")
+                                    span.postUser= post.user
+                                    br
+                                    span.postType= post.type
+                                .col.s6(style="text-align:right")
+                                    span.postTime= post.time
+                                    br
+                                    span.postDistance= post.distance
+                            img.responsive-img(src= post.image)
+                            .row.cardFooter
+                                .col.s4
+                                    i.material-icons favorite
+                                    span= post.favCount
+                                .col.s4
+                                    i.material-icons question_answer
+                                    span= post.commentCount
+                                .col.s4
+                                    i.material-icons autorenew
+                                    span= post.repostCount
+
+block append scripts
+    script(src="/js/feed.js")
+    script.
+        var elem = document.querySelector('.sidenav');
+        var instance = M.Sidenav.init(elem);

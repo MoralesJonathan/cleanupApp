@@ -1,0 +1,60 @@
+nav {
+  background-color: #4B89C6 !important;
+  position: fixed;
+  z-index: 1; }
+
+#mainContent {
+  padding-top: 60px; }
+
+@media only screen and (min-width: 601px) {
+  #mainContent {
+    padding-top: 80px; } }
+
+#userArea {
+  background-color: #4B89C6;
+  padding-top: 45px;
+  padding-bottom: 20px; }
+
+#userArea img {
+  max-height: 10vh;
+  line-height: 20px; }
+
+.sidenav li span {
+  line-height: 20px;
+  display: block; }
+
+#backArrow {
+  position: absolute;
+  top: 0px;
+  left: 32px; }
+
+.noMarginBottom {
+  margin-bottom: 0px !important; }
+
+.profilePic {
+  margin-top: 2px; }
+
+.cardTitle {
+  padding: 3px 10px 0px 10px; }
+
+.cardFooter {
+  padding: 10px 0px;
+  font-size: 4vw;
+  color: grey; }
+
+.cardFooter i {
+  font-size: 4vw; }
+
+.cardFooter span {
+  vertical-align: text-bottom;
+  padding-left: 3px; }
+
+.postType, .postTime, .postDistance {
+  color: grey; }
+
+.postUser {
+  font-weight: 500;
+  color: #2c3e50; }
+
+.noPadding {
+  padding: 0px !important; }
