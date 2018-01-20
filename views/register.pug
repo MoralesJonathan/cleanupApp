@@ -1,0 +1,31 @@
+extend ../pug/boilerplate.pug
+
+block prepend stylesheets
+    link(rel="stylesheet" href="/css/register.css")
+    
+block content
+    .container
+        .row
+            .col.s12.center
+                img(src="https://placehold.it/100x100") 
+            .col.s12.center
+                span#appName Appname
+        form(action="/register" method="post")
+            .row
+                .col.s12.input-field
+                    input.validate.browser-default(placeholder="First name" name="firstname" id="first_name" type="text" required)
+            .row
+                .col.s12.input-field
+                    input.validate.browser-default(placeholder="Last name" name="lastname" id="last_name" type="text" required)
+            .row
+                .col.s12.input-field
+                    input.validate.browser-default(placeholder="Email" name="email" id="email" type="email" required)
+            .row
+                .col.s12.input-field
+                    input.validate.browser-default(placeholder="Username" name="username" id="username" type="text" required)
+            .row
+                .col.s12.input-field
+                    input.validate.browser-default(placeholder="Password" name="password" id="password" type="password" required)
+            .row
+                .col.s12.center
+                    input.waves-effect.waves-light.btn#signinBtn(type="submit" value="Create account")

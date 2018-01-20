@@ -6,6 +6,7 @@
   "repository": "https://github.com/jonmorazav/cleanupApp",
   "author": "Jonathan Morales <jonmorazav@yahoo.com>",
   "dependencies": {
+    "bcrypt": "^1.0.3",
     "connect-mongo": "^2.0.1",
     "cookie-parser": "^1.4.3",
     "express": "^4.16.2",

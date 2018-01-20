@@ -1,0 +1,36 @@
+extend ../pug/boilerplate.pug
+
+block prepend stylesheets
+    link(rel="stylesheet" href="/css/login.css")
+    
+block content
+    .content
+        .container
+            .row
+                .col.s12.center
+                    img(src="https://placehold.it/100x100") 
+
+            form(action="/login" method="post")
+                .row
+                    .col.s12.l6.offset-l3.input-field
+                        input.validate.browser-default(placeholder="Username" id="username" name="username" type="text" required)
+                .row
+                    .col.s12.l6.offset-l3.input-field
+                        input.validate.browser-default(placeholder="Password" id="password" name="password" type="password" required)
+                .row
+                    .col.s12.l6.offset-l3.center
+                        input.waves-effect.waves-light.btn#signinBtn(type="submit" value="Sign in")
+                if (errorMsg)
+                    .row(style="margin-bottom: 5px;")
+                        .col.s12
+                            #error.valign-wrapper
+                                i.material-icons error_outline
+                                span &nbsp
+                                span= errorMsg
+            .row
+                .col.s12.center
+                    a#forgotPassword.white-text(href="#!") Forgot Password?
+    .container
+        .row#register
+            .col.s12.l6.offset-l3.center
+                a.waves-effect.waves-light.flat-outline-btn#registerBtn(href="register") Create an account

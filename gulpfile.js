@@ -23,7 +23,7 @@ gulp.task('autoprefix', ['sass'], function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch('Platform/dev/sass/*.sass', ['sass','autoprefix']);
+  gulp.watch('sass/*.sass', ['sass','autoprefix']);
 });
 
 gulp.task('default', [ 'sass', 'autoprefix', 'watch'], function() {});
