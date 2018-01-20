@@ -1,0 +1,13 @@
+{
+    "verbose": true,
+    "execMap": {
+        "js": "node --harmony"
+    },
+    "delay": "2000",
+    "watch": [
+        "server.js"
+    ],
+    "env": {
+        "NODE_ENV": "development"
+    }
+}
