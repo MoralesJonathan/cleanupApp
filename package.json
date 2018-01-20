@@ -1,0 +1,11 @@
+{
+  "name": "Cleanup App",
+  "version": "0.0.1",
+  "description": "A cleanup app for post natural disasters.",
+  "main": "server.js",
+  "repository": "",
+  "author": "Jonathan Morales <jonmorazav@yahoo.com>",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
